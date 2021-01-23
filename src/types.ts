@@ -5,3 +5,11 @@ export interface User {
   phone: string;
   password: string;
 }
+
+export const DEFAULT_USER: User = {
+  firstName: "",
+  lastName: "",
+  email: "",
+  phone: "",
+  password: "",
+};

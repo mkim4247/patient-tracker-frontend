@@ -6,7 +6,9 @@ export interface User {
   password: string;
 }
 
+export type SignupFormValues = User;
 export type LoginFormValues = Pick<User, "email" | "password">;
+export type LandingFormValues = Pick<User, "email">;
 
 export const DEFAULT_USER: User = {
   firstName: "",

@@ -4,7 +4,7 @@ import { IonPage } from "@ionic/react";
 import { toJS } from "mobx";
 import { observer } from "mobx-react";
 
-import useStores from "../hooks/useStores";
+import useStores from "hooks/useStores";
 
 const Home: React.FC<RouteComponentProps> = ({ history }) => {
   const { userStore } = useStores();

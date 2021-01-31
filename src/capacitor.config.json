@@ -1,6 +1,6 @@
 {
   "appId": "io.ionic.starter",
-  "appName": "supplyhound-order-app",
+  "appName": "",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "build",

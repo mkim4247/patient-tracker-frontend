@@ -4,7 +4,7 @@ import { IonPage } from "@ionic/react";
 
 import { SignupFormValues } from "types";
 import useStores from "hooks/useStores";
-import SignupFrom from "forms/SignupForm";
+import SignupForm from "forms/SignupForm";
 
 const Signup: React.FC<RouteComponentProps> = ({ history }) => {
   const { userStore } = useStores();

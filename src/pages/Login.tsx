@@ -2,7 +2,7 @@ import React from "react";
 import { RouteComponentProps } from "react-router-dom";
 import { IonPage, IonLabel } from "@ionic/react";
 
-import { LogInFormValues } from "types";
+import { LoginFormValues } from "types";
 import useStores from "hooks/useStores";
 import LoginForm from "forms/LoginForm";
 

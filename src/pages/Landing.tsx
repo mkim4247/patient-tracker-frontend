@@ -19,3 +19,5 @@ const Landing: React.FC<RouteComponentProps> = ({ history }) => {
     </IonPage>
   );
 };
+
+export default Landing;

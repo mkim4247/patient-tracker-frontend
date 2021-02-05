@@ -24,7 +24,17 @@ const SignupForm: React.FC<SignupFormProps & FormikProps<SignupFormValues>> = ({
 }) => {
   return (
     <>
-      <IonContent></IonContent>
+      <IonContent>
+        <Field
+          name="firstName"
+          component={FormikInput}
+          type="text"
+          label="First Name"
+          placeholder="Enter first name here"
+          formatter={titleCase}
+          required
+        />
+      </IonContent>
     </>
   );
 };

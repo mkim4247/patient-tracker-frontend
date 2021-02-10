@@ -11,6 +11,8 @@ import {
 import * as Yup from "yup";
 
 import { User, SignupFormValues } from "types";
+import { titleCase } from "utils/formatters";
+import FormikInput from "./fields/FormikInput";
 import Signup from "pages/Signup";
 
 interface SignupFormProps {
@@ -32,6 +34,25 @@ const SignupForm: React.FC<SignupFormProps & FormikProps<SignupFormValues>> = ({
           label="First Name"
           placeholder="Enter first name here"
           formatter={titleCase}
+          required
+        />
+
+        <Field
+          name="lastName"
+          component={FormikInput}
+          type="text"
+          label="Last Name"
+          placeholder="Enter last name here"
+          formatter={titleCase}
+          required
+        />
+
+        <Field
+          name="email"
+          component={FormikInput}
+          type="text"
+          label="Email Address"
+          placeholder="Enter email address here"
           required
         />
       </IonContent>

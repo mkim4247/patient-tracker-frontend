@@ -55,6 +55,14 @@ const SignupForm: React.FC<SignupFormProps & FormikProps<SignupFormValues>> = ({
           placeholder="Enter email address here"
           required
         />
+        <Field
+          name="password"
+          component={FormikInput}
+          type="text"
+          label="Password"
+          placeholder="Enter password here"
+          required
+        />
       </IonContent>
     </>
   );
@@ -66,6 +74,9 @@ export default withFormik<SignupFormProps, SignupFormValues>({
 
   validationSchema: Yup.object().shape({
     firstName: Yup.string().required(),
+    lastName: Yup.string().required(),
+    email: Yup.string().required(),
+    password: Yup.string().required(),
   }),
 
   mapPropsToValues({ user }: SignupFormProps): SignupFormValues {

@@ -5,6 +5,7 @@ import { IonContent, IonItem, IonLabel } from "@ionic/react";
 import * as Yup from "yup";
 
 import { User, LoginFormValues } from "types";
+import FormikInput from "./fields/FormikInput";
 
 interface LoginFormProps {
   user: User;
@@ -18,7 +19,23 @@ const LoginForm: React.FC<LoginFormProps & FormikProps<LoginFormValues>> = ({
   return (
     <>
       <IonContent>
-        <Field />
+        <Field
+          name="email"
+          component={FormikInput}
+          type="text"
+          label="Email Address"
+          placeholder="Enter email here"
+          required
+        />
+
+        <Field
+          name="password"
+          component={FormikInput}
+          type="text"
+          label="Password"
+          placeholder="Enter password here"
+          required
+        />
       </IonContent>
     </>
   );
@@ -30,6 +47,7 @@ export default withFormik<LoginFormProps, LoginFormValues>({
 
   validationSchema: Yup.object().shape({
     email: Yup.string().required("Email address is required"),
+    password: Yup.string().required("Password is required"),
   }),
 
   mapPropsToValues({ user }: LoginFormProps): LoginFormValues {

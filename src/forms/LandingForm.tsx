@@ -5,6 +5,7 @@ import { IonContent } from "@ionic/react";
 import * as Yup from "yup";
 
 import { User, LandingFormValues } from "types";
+import FormikInput from "./fields/FormikInput";
 
 interface LandingFormProps {
   user: User;
@@ -16,7 +17,14 @@ const LandingForm: React.FC<
 > = ({ isValid, submitForm }) => {
   return (
     <IonContent>
-      <Field />
+      <Field
+        name="email"
+        component={FormikInput}
+        type="text"
+        label="Email Address"
+        placeholder="Enter email here"
+        required
+      />
     </IonContent>
   );
 };
@@ -26,7 +34,7 @@ export default withFormik<LandingFormProps, LandingFormValues>({
   enableReinitialize: true,
 
   validationSchema: Yup.object().shape({
-    email: Yup.string().required("Please enter a valid email"),
+    email: Yup.string().required(""),
   }),
 
   mapPropsToValues({ user }: LandingFormProps): LandingFormValues {

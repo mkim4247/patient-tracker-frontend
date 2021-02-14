@@ -13,10 +13,12 @@ const App: React.FC = () => {
       <IonReactRouter>
         <Switch>
           <IonSplitPane>
-            <Route exact path="/home" component={Home} />
-            <Route exact path="/landing" component={Landing} />
-            <Route exact path="/signup" component={Signup} />
-            <Route exact path="/login" component={Login} />
+            <IonRouterOutlet>
+              <Route exact path="/home" component={Home} />
+              <Route exact path="/landing" component={Landing} />
+              <Route exact path="/signup" component={Signup} />
+              <Route exact path="/login" component={Login} />
+            </IonRouterOutlet>
           </IonSplitPane>
         </Switch>
       </IonReactRouter>

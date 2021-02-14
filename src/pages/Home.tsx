@@ -9,6 +9,8 @@ import useStores from "hooks/useStores";
 const Home: React.FC<RouteComponentProps> = ({ history }) => {
   const { userStore } = useStores();
 
+  const handleSubmit = () => {};
+
   return (
     <IonPage>
       <div className="App">
